@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * Класс магазина
+ */
 public class Shop {
     private final List<Product> products;
 
@@ -33,7 +36,11 @@ public class Shop {
         products.sort(new ProductComparatorByPrice());
     }
 
-    // Метод должен вернуть самый дорогой продукт
+    /**
+     * Метод возвращения самого дорогого продукта в списке
+     *
+     * @return самый дорогой продукт
+     */
     public Product getMostExpensiveProduct() {
         sortProductsByPrice();
         int maxElem = Collections.binarySearch(products, products.get(products.size() - 1), new ProductComparatorByPrice());
@@ -41,7 +48,7 @@ public class Shop {
     }
 
     /**
-     * Внутренний компаратор
+     * Внутренний класс компаратора
      */
     private class ProductComparatorByPrice implements java.util.Comparator<Product>{
 
@@ -51,7 +58,6 @@ public class Shop {
         }
     }
 
-    // Геттеры, сеттеры:
     public List<Product> getProducts() {
         return products;
     }

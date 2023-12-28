@@ -3,6 +3,7 @@ package org.example.Calculator;
 public class Calculator {
 
     /**
+     * Метод расчета итоговой цены товара в корзине
      *
      * @param purchaseAmount сумма покупки
      * @param discountAmount размер скидки (число от 1 до 100)
